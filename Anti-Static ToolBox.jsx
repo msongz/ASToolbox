@@ -1,5 +1,5 @@
 // Anti-Static ToolBox
-// v 1.1.2
+// v 1.1.2.1
 // by James Zelasko
 // This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 // http://creativecommons.org/licenses/by-sa/4.0/
@@ -1565,6 +1565,10 @@ palette.layout.layout(true);
 palette.layout.resize();
 palette.onResizing = palette.onResize = function () { this.layout.resize(); }
 
+if (palette instanceof Window) {
+    palette.center();
+    palette.show();
+}
 
 
 
